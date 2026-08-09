@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Internships - Saranya Jeyaraman</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #F5F7F2;
+            color: #222222;
+        }
+
+
+        /* ================= NAVIGATION ================= */
+
+        nav {
+            width: 100%;
+            height: 70px;
+
+            background: #355E3B;
+
+            display: flex;
+            align-items: center;
+
+            padding: 0 14px;
+
+            position: fixed;
+            top: 0;
+            left: 0;
+
+            z-index: 1000;
+        }
+
+
+        nav ul {
+            width: 100%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            list-style: none;
+        }
+
+
+        nav ul li a {
+            display: block;
+
+            color: white;
+
+            text-decoration: none;
+
+            font-size: 17px;
+
+            font-weight: bold;
+
+            padding: 13px 16px;
+
+            border-radius: 7px;
+
+            transition: 0.3s;
+        }
+
+
+        /* INTERNSHIPS ACTIVE */
+
+        nav ul li a.active {
+            background: #274C32;
+
+            box-shadow:
+                0 0 8px rgba(0, 0, 0, 0.45),
+                0 0 18px rgba(0, 0, 0, 0.30),
+                0 0 28px rgba(0, 0, 0, 0.15);
+        }
+
+
+        nav ul li a:hover {
+            background: #274C32;
+        }
+
+
+        /* ================= INTERNSHIPS ================= */
+
+        .internships {
+
+            min-height: calc(100vh - 70px);
+
+            padding-top: 120px;
+
+            padding-left: 8%;
+
+            padding-right: 8%;
+
+            padding-bottom: 60px;
+
+            background: #F5F7F2;
+        }
+
+
+        /* ================= TITLE ================= */
+
+        .internships-title {
+
+            text-align: center;
+
+            margin-bottom: 50px;
+        }
+
+
+        .internships-title h1 {
+
+            color: #355E3B;
+
+            font-size: 36px;
+
+            font-weight: bold;
+
+            margin-bottom: 13px;
+        }
+
+
+        .line {
+
+            width: 88px;
+
+            height: 5px;
+
+            background: #527A5A;
+
+            border-radius: 5px;
+
+            margin: auto;
+        }
+
+
+        /* ================= INTERNSHIP CARDS ================= */
+
+        .internships-container {
+
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 30px;
+
+            max-width: 1100px;
+
+            margin: auto;
+        }
+
+
+        .internship-card {
+
+            background: linear-gradient(
+                to bottom,
+                #E8F0E5,
+                #DCE8D9
+            );
+
+            border-radius: 13px;
+
+            padding: 35px;
+
+            min-height: 300px;
+
+            box-shadow:
+                0 5px 18px rgba(0, 0, 0, 0.12);
+
+            transition: 0.3s;
+        }
+
+
+        .internship-card:hover {
+
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 10px 25px rgba(0, 0, 0, 0.18);
+        }
+
+
+        .internship-card h2 {
+
+            color: #355E3B;
+
+            font-size: 25px;
+
+            text-align: center;
+
+            margin-bottom: 12px;
+        }
+
+
+        .internship-card h3 {
+
+            text-align: center;
+
+            font-size: 18px;
+
+            margin-bottom: 22px;
+
+            color: #333333;
+        }
+
+
+        .internship-card p {
+
+            font-size: 17px;
+
+            line-height: 1.6;
+
+            margin-bottom: 10px;
+
+            color: #222222;
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        footer {
+
+            height: 70px;
+
+            background: #26352A;
+
+            color: white;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 16px;
+        }
+
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 800px) {
+
+            nav {
+
+                height: auto;
+
+                padding: 10px;
+            }
+
+
+            nav ul {
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+
+                gap: 4px;
+            }
+
+
+            nav ul li a {
+
+                font-size: 14px;
+
+                padding: 9px 11px;
+            }
+
+
+            .internships {
+
+                padding-top: 150px;
+
+                padding-left: 20px;
+
+                padding-right: 20px;
+            }
+
+
+            .internships-title h1 {
+
+                font-size: 30px;
+            }
+
+
+            .internships-container {
+
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <nav>
+
+        <ul>
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+
+            <li>
+                <a href="about.html">
+                    About
+                </a>
+            </li>
+
+
+            <li>
+                <a href="education.html">
+                    Education
+                </a>
+            </li>
+
+
+            <li>
+                <a href="projects.html">
+                    Projects
+                </a>
+            </li>
+
+
+            <li>
+                <a href="internships.html" class="active">
+                    Internships
+                </a>
+            </li>
+
+
+            <li>
+                <a href="myresume.html">
+                    My Resume
+                </a>
+            </li>
+
+
+            <li>
+                <a href="roles.html">
+                    Roles & Responsibilities
+                </a>
+            </li>
+
+
+            <li>
+                <a href="achievements.html">
+                    Achievements
+                </a>
+            </li>
+
+
+            <li>
+                <a href="contact.html">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+
+    <!-- ================= INTERNSHIPS PAGE ================= -->
+
+    <section class="internships">
+
+
+        <div class="internships-title">
+
+            <h1>
+                My Internship Experience
+            </h1>
+
+            <div class="line"></div>
+
+        </div>
+
+
+
+        <div class="internships-container">
+
+
+            <!-- ================= AISHVEL ================= -->
+
+            <div class="internship-card">
+
+                <h2>
+                    📊 Data Warehousing Intern
+                </h2>
+
+                <h3>
+                    🏢 Aishvel Infotech Pvt. Ltd., Chennai
+                </h3>
+
+                <p>
+                    📊 Worked on SQL, ETL, Star Schema and
+                    Data Warehouse implementation.
+                </p>
+
+                <p>
+                    📅 Duration: 1 Month
+                </p>
+
+                <p>
+                    June 2025 - July 2025
+                </p>
+
+            </div>
+
+
+
+            <!-- ================= GREENSOFT ================= -->
+
+            <div class="internship-card">
+
+                <h2>
+                    🤖 AI & ML Intern
+                </h2>
+
+                <h3>
+                    🏢 GreenSoft Groups, Thillainagar,
+                    Tiruchirappalli
+                </h3>
+
+                <p>
+                    🤖 Internship focused on Artificial Intelligence
+                    and Machine Learning.
+                </p>
+
+                <p>
+                    💡 Gained practical exposure to AI & ML concepts
+                    and their applications.
+                </p>
+
+                </p>
+                    📅 Duration: 1 Month ( June 2026 - July 2026 )
+                </p>
+                
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        © 2026 Saranya Jeyaraman. All rights reserved.
+
+    </footer>
+
+
+</body>
+
+</html>

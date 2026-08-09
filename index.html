@@ -1,0 +1,564 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Saranya Jeyaraman - Portfolio</title>
+
+
+    <style>
+
+        /* =========================
+           BASIC SETTINGS
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #F5F7F2;
+            color: #222222;
+        }
+
+
+        /* =========================
+           NAVIGATION BAR
+        ========================= */
+
+        nav {
+            width: 100%;
+            height: 70px;
+
+            background: #355E3B;
+
+            display: flex;
+            align-items: center;
+
+            padding: 0 14px;
+
+            position: fixed;
+
+            top: 0;
+            left: 0;
+
+            z-index: 1000;
+        }
+
+
+        nav ul {
+            width: 100%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            list-style: none;
+        }
+
+
+        nav ul li a {
+            display: block;
+
+            color: white;
+
+            text-decoration: none;
+
+            font-size: 17px;
+
+            font-weight: bold;
+
+            padding: 13px 16px;
+
+            border-radius: 7px;
+
+            transition: 0.3s;
+        }
+
+
+        /* =========================
+           ACTIVE PAGE
+        ========================= */
+
+        nav ul li a.active {
+            background: #274C32;
+
+            box-shadow:
+                0 0 8px rgba(0, 0, 0, 0.45),
+                0 0 18px rgba(0, 0, 0, 0.30),
+                0 0 28px rgba(0, 0, 0, 0.15);
+        }
+
+
+        /* =========================
+           NAVIGATION HOVER
+        ========================= */
+
+        nav ul li a:hover {
+            background: #274C32;
+
+            box-shadow:
+                0 0 10px rgba(0, 0, 0, 0.30);
+        }
+
+
+        /* =========================
+           HOME PAGE
+        ========================= */
+
+        .home {
+            min-height: 100vh;
+
+            padding-top: 70px;
+
+            padding-left: 20px;
+
+            padding-right: 20px;
+
+            background: #F5F7F2;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+        }
+
+
+        /* =========================
+           PHOTO SPACE
+        ========================= */
+
+        .photo-space {
+
+            width: 260px;
+
+            height: 260px;
+
+            border-radius: 50%;
+
+            background: #E8F0E5;
+
+            border: 5px solid #527A5A;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            margin-bottom: 30px;
+
+            box-shadow:
+                0 8px 25px rgba(0, 0, 0, 0.15);
+
+            overflow: hidden;
+        }
+
+
+        /* =========================
+           PROFILE PHOTO
+        ========================= */
+
+        .photo-space img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            border-radius: 50%;
+
+            display: block;
+        }
+
+
+        /* =========================
+           MAIN HEADING
+        ========================= */
+
+        .home h1 {
+
+            color: #355E3B;
+
+            font-size: 40px;
+
+            font-weight: bold;
+
+            margin-bottom: 15px;
+        }
+
+
+        /* =========================
+           GREEN LINE
+        ========================= */
+
+        .line {
+
+            width: 85px;
+
+            height: 5px;
+
+            background: #527A5A;
+
+            border-radius: 5px;
+
+            margin-bottom: 20px;
+        }
+
+
+        /* =========================
+           DESCRIPTION
+        ========================= */
+
+        .home p {
+
+            max-width: 850px;
+
+            font-size: 18px;
+
+            line-height: 1.7;
+
+            color: #222222;
+
+            margin-bottom: 30px;
+        }
+
+
+        /* =========================
+           BUTTONS
+        ========================= */
+
+        .buttons {
+
+            display: flex;
+
+            gap: 25px;
+        }
+
+
+        .buttons a {
+
+            background: #527A5A;
+
+            color: white;
+
+            text-decoration: none;
+
+            padding: 16px 27px;
+
+            border-radius: 9px;
+
+            font-size: 17px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+
+        .buttons a:hover {
+
+            background: #355E3B;
+
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 8px 18px rgba(0, 0, 0, 0.20);
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+
+            height: 90px;
+
+            background: #26352A;
+
+            color: white;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 17px;
+        }
+
+
+        /* =========================
+           MOBILE RESPONSIVE
+        ========================= */
+
+        @media (max-width: 1000px) {
+
+            nav {
+
+                height: auto;
+
+                padding: 10px;
+            }
+
+
+            nav ul {
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+
+                gap: 4px;
+            }
+
+
+            nav ul li a {
+
+                font-size: 14px;
+
+                padding: 9px 11px;
+            }
+
+
+            .home {
+
+                padding-top: 150px;
+
+                padding-bottom: 60px;
+            }
+
+
+            .photo-space {
+
+                width: 210px;
+
+                height: 210px;
+            }
+
+
+            .home h1 {
+
+                font-size: 30px;
+            }
+
+
+            .home p {
+
+                max-width: 95%;
+
+                font-size: 16px;
+            }
+
+
+            .buttons {
+
+                flex-direction: column;
+
+                gap: 12px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
+
+    <nav>
+
+        <ul>
+
+            <li>
+                <a href="index.html" class="active">
+                    Home
+                </a>
+            </li>
+
+
+            <li>
+                <a href="about.html">
+                    About
+                </a>
+            </li>
+
+
+            <li>
+                <a href="education.html">
+                    Education
+                </a>
+            </li>
+
+
+            <li>
+                <a href="projects.html">
+                    Projects
+                </a>
+            </li>
+
+
+            <li>
+                <a href="internships.html">
+                    Internships
+                </a>
+            </li>
+
+
+            <li>
+                <a href="myresume.html">
+                    My Resume
+                </a>
+            </li>
+
+
+            <li>
+                <a href="roles.html">
+                    Roles & Responsibilities
+                </a>
+            </li>
+
+
+            <li>
+                <a href="achievements.html">
+                    Achievements
+                </a>
+            </li>
+
+
+            <li>
+                <a href="contact.html">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- =========================
+         HOME PAGE
+    ========================= -->
+
+    <section class="home">
+
+
+        <!-- =========================
+             PROFILE PHOTO
+        ========================= -->
+
+        <div class="photo-space">
+
+            <img
+                src="images/saranya.jpeg"
+                alt="Saranya Jeyaraman">
+
+        </div>
+
+
+        <!-- =========================
+             MAIN HEADING
+        ========================= -->
+
+        <h1>
+
+            Welcome to Saranya Jeyaraman's Portfolio
+
+        </h1>
+
+
+        <!-- =========================
+             GREEN LINE
+        ========================= -->
+
+        <div class="line"></div>
+
+
+        <!-- =========================
+             DESCRIPTION
+        ========================= -->
+
+        <p>
+
+            Explore my portfolio to discover my academic journey,
+            technical skills, innovative projects, internship
+            experiences, leadership roles, achievements, and career
+            interests in Artificial Intelligence, Data Science,
+            Data Analytics, Power BI, and Full-Stack Development.
+
+        </p>
+
+
+        <!-- =========================
+             BUTTONS
+        ========================= -->
+
+        <div class="buttons">
+
+
+            <!-- GO TO ABOUT PAGE -->
+
+            <a href="about.html">
+
+                Explore About Page
+
+            </a>
+
+
+            <!-- GO TO RESUME PAGE -->
+
+            <a href="myresume.html">
+
+                Explore Resume
+
+            </a>
+
+
+        </div>
+
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        © 2026 Saranya Jeyaraman. All rights reserved.
+
+    </footer>
+
+
+</body>
+
+</html>
+```

@@ -1,0 +1,680 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Saranya Jeyaraman - Achievements</title>
+
+
+    <style>
+
+        /* =========================
+           BASIC SETTINGS
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+
+            background: #F5F7F2;
+
+            color: #222222;
+        }
+
+
+        /* =========================
+           NAVIGATION BAR
+        ========================= */
+
+        nav {
+
+            width: 100%;
+
+            height: 70px;
+
+            background: #355E3B;
+
+            display: flex;
+
+            align-items: center;
+
+            padding: 0 14px;
+
+            position: fixed;
+
+            top: 0;
+
+            left: 0;
+
+            z-index: 1000;
+        }
+
+
+        nav ul {
+
+            width: 100%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            list-style: none;
+        }
+
+
+        nav ul li a {
+
+            display: block;
+
+            color: white;
+
+            text-decoration: none;
+
+            font-size: 17px;
+
+            font-weight: bold;
+
+            padding: 13px 16px;
+
+            border-radius: 7px;
+
+            transition: 0.3s;
+        }
+
+
+        /* =========================
+           ACTIVE PAGE
+        ========================= */
+
+        nav ul li a.active {
+
+            background: #274C32;
+
+            box-shadow:
+                0 0 8px rgba(0, 0, 0, 0.45),
+                0 0 18px rgba(0, 0, 0, 0.30),
+                0 0 28px rgba(0, 0, 0, 0.15);
+        }
+
+
+        nav ul li a:hover {
+
+            background: #274C32;
+
+            box-shadow:
+                0 0 10px rgba(0, 0, 0, 0.30);
+        }
+
+
+        /* =========================
+           ACHIEVEMENTS PAGE
+        ========================= */
+
+        .achievements {
+
+            min-height: 100vh;
+
+            padding-top: 120px;
+
+            padding-bottom: 70px;
+
+            padding-left: 8%;
+
+            padding-right: 8%;
+
+            background: #F5F7F2;
+        }
+
+
+        /* =========================
+           PAGE TITLE
+        ========================= */
+
+        .achievements h1 {
+
+            text-align: center;
+
+            color: #355E3B;
+
+            font-size: 40px;
+
+            font-weight: bold;
+
+            margin-bottom: 15px;
+        }
+
+
+        /* =========================
+           GREEN LINE
+        ========================= */
+
+        .line {
+
+            width: 85px;
+
+            height: 5px;
+
+            background: #527A5A;
+
+            border-radius: 5px;
+
+            margin: 0 auto 45px auto;
+        }
+
+
+        /* =========================
+           ACHIEVEMENT GRID
+        ========================= */
+
+        .achievement-container {
+
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 25px;
+
+            max-width: 1200px;
+
+            margin: auto;
+        }
+
+
+        /* =========================
+           ACHIEVEMENT CARD
+        ========================= */
+
+        .achievement-card {
+
+            background: white;
+
+            border-radius: 12px;
+
+            padding: 28px;
+
+            border-left: 6px solid #527A5A;
+
+            box-shadow:
+                0 6px 18px rgba(0, 0, 0, 0.10);
+
+            transition: 0.3s;
+        }
+
+
+        .achievement-card:hover {
+
+            transform: translateY(-6px);
+
+            box-shadow:
+                0 10px 25px rgba(0, 0, 0, 0.18);
+        }
+
+
+        /* =========================
+           PRIZE ICON
+        ========================= */
+
+        .achievement-icon {
+
+            font-size: 38px;
+
+            margin-bottom: 12px;
+        }
+
+
+        /* =========================
+           CARD HEADING
+        ========================= */
+
+        .achievement-card h2 {
+
+            color: #355E3B;
+
+            font-size: 22px;
+
+            margin-bottom: 12px;
+        }
+
+
+        /* =========================
+           CARD DESCRIPTION
+        ========================= */
+
+        .achievement-card p {
+
+            font-size: 16px;
+
+            line-height: 1.7;
+
+            color: #444444;
+        }
+
+
+        /* =========================
+           MULTIPLE COMPETITIONS
+        ========================= */
+
+        .competition-list {
+
+            margin-top: 12px;
+
+            padding-left: 20px;
+        }
+
+
+        .competition-list li {
+
+            margin-bottom: 7px;
+
+            color: #444444;
+
+            line-height: 1.5;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+
+            height: 90px;
+
+            background: #26352A;
+
+            color: white;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 17px;
+        }
+
+
+        /* =========================
+           MOBILE RESPONSIVE
+        ========================= */
+
+        @media (max-width: 1000px) {
+
+            nav {
+
+                height: auto;
+
+                padding: 10px;
+            }
+
+
+            nav ul {
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+
+                gap: 4px;
+            }
+
+
+            nav ul li a {
+
+                font-size: 14px;
+
+                padding: 9px 11px;
+            }
+
+
+            .achievements {
+
+                padding-top: 150px;
+
+                padding-left: 5%;
+
+                padding-right: 5%;
+            }
+
+
+            .achievements h1 {
+
+                font-size: 30px;
+            }
+
+
+            .achievement-container {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .achievement-card {
+
+                padding: 22px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav>
+
+    <ul>
+
+        <li>
+            <a href="index.html">
+                Home
+            </a>
+        </li>
+
+        <li>
+            <a href="about.html">
+                About
+            </a>
+        </li>
+
+        <li>
+            <a href="education.html">
+                Education
+            </a>
+        </li>
+
+        <li>
+            <a href="projects.html">
+                Projects
+            </a>
+        </li>
+
+        <li>
+            <a href="internships.html">
+                Internships
+            </a>
+        </li>
+
+        <li>
+            <a href="myresume.html">
+                My Resume
+            </a>
+        </li>
+
+        <li>
+            <a href="roles.html">
+                Roles & Responsibilities
+            </a>
+        </li>
+
+        <li>
+            <a href="achievements.html" class="active">
+                Achievements
+            </a>
+        </li>
+
+        <li>
+            <a href="contact.html">
+                Contact
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+<!-- =========================
+     ACHIEVEMENTS PAGE
+========================= -->
+
+<section class="achievements">
+
+
+    <!-- PAGE TITLE -->
+
+    <h1>
+
+        Achievements
+
+    </h1>
+
+
+    <!-- GREEN LINE -->
+
+    <div class="line"></div>
+
+
+    <!-- ACHIEVEMENT CARDS -->
+
+    <div class="achievement-container">
+
+
+        <!-- INVENTE 2.0 -->
+
+        <div class="achievement-card">
+
+            <div class="achievement-icon">
+                🥇
+            </div>
+
+            <h2>
+                First Prize – INVENTE 2.0
+            </h2>
+
+            <p>
+                Secured First Prize in INVENTE 2.0,
+                organized by the Entrepreneurship Development
+                Cell (EDC), CARE College of Engineering.
+            </p>
+
+        </div>
+
+
+        <!-- INVENTE 3.0 -->
+
+        <div class="achievement-card">
+
+            <div class="achievement-icon">
+                🥇
+            </div>
+
+            <h2>
+                First Prize – INVENTE 3.0
+            </h2>
+
+            <p>
+                Won First Prize in INVENTE 3.0 for presenting
+                an innovative solution, organized by the
+                Entrepreneurship Development Cell (EDC),
+                CARE College of Engineering.
+            </p>
+
+        </div>
+
+
+        <!-- SPARX CHEMISTRY -->
+
+        <div class="achievement-card">
+
+            <div class="achievement-icon">
+                🥇
+            </div>
+
+            <h2>
+                First Prize – SPARX Expo Chemistry
+            </h2>
+
+            <p>
+                Won First Prize in the Chemistry category
+                at SPARX Expo, organized by GESA & Science Club
+                during National Science Day.
+            </p>
+
+        </div>
+
+
+        <!-- SPARX PHYSICS -->
+
+        <div class="achievement-card">
+
+            <div class="achievement-icon">
+                🥈
+            </div>
+
+            <h2>
+                Second Prize – SPARX Expo Physics
+            </h2>
+
+            <p>
+                Won Second Prize in the Physics category
+                at SPARX Expo, organized by GESA & Science Club
+                during National Science Day.
+            </p>
+
+        </div>
+
+
+        <!-- TECHNICAL PRESENTATION -->
+
+        <div class="achievement-card">
+
+            <div class="achievement-icon">
+                🥈
+            </div>
+
+            <h2>
+                Second Prize – Technical Presentation
+            </h2>
+
+            <p>
+                Won Second Prize in a Technical Presentation
+                at Periyar Maniammai Institute of Science and
+                Technology, Thanjavur.
+            </p>
+
+        </div>
+
+
+        <!-- INTUITIVE DESIGN -->
+
+        <div class="achievement-card">
+
+            <div class="achievement-icon">
+                🥇
+            </div>
+
+            <h2>
+                First Prize – Intuitive Design
+            </h2>
+
+            <p>
+                Secured First Prize in Intuitive Design at
+                Dhanalakshmi Srinivasan University,
+                Samayapuram, Tiruchirappalli.
+            </p>
+
+        </div>
+
+
+        <!-- CHESS -->
+
+        <div class="achievement-card">
+
+            <div class="achievement-icon">
+                ♟️
+            </div>
+
+            <h2>
+                First Prize – Chess
+            </h2>
+
+            <p>
+                Won First Prize in Chess at the
+                14th Annual Sports Meet of
+                CARE College of Engineering.
+            </p>
+
+        </div>
+
+
+        <!-- MULTIPLE COMPETITIONS -->
+
+        <div class="achievement-card">
+
+            <div class="achievement-icon">
+                🏆
+            </div>
+
+            <h2>
+                Multiple Competition Winner
+            </h2>
+
+            <p>
+                Won numerous First, Second, and Third Prizes
+                in technical and non-technical competitions.
+            </p>
+
+            <ul class="competition-list">
+
+                <li>PPT Presentation</li>
+
+                <li>Web Designing</li>
+
+                <li>Debugging</li>
+
+                <li>Coding Contest</li>
+
+                <li>Technical Quiz</li>
+
+                <li>Logo Design</li>
+
+            </ul>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    © 2026 Saranya Jeyaraman. All rights reserved.
+
+</footer>
+
+
+</body>
+
+</html>
+```

@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Resume - Saranya Jeyaraman</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #F5F7F2;
+            color: #222222;
+        }
+
+
+        /* ================= NAVIGATION ================= */
+
+        nav {
+            width: 100%;
+            height: 70px;
+
+            background: #355E3B;
+
+            display: flex;
+            align-items: center;
+
+            padding: 0 14px;
+
+            position: fixed;
+            top: 0;
+            left: 0;
+
+            z-index: 1000;
+        }
+
+
+        nav ul {
+            width: 100%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            list-style: none;
+        }
+
+
+        nav ul li a {
+            display: block;
+
+            color: white;
+
+            text-decoration: none;
+
+            font-size: 17px;
+
+            font-weight: bold;
+
+            padding: 13px 16px;
+
+            border-radius: 7px;
+
+            transition: 0.3s;
+        }
+
+
+        /* MY RESUME ACTIVE */
+
+        nav ul li a.active {
+            background: #274C32;
+
+            box-shadow:
+                0 0 8px rgba(0, 0, 0, 0.45),
+                0 0 18px rgba(0, 0, 0, 0.30),
+                0 0 28px rgba(0, 0, 0, 0.15);
+        }
+
+
+        nav ul li a:hover {
+            background: #274C32;
+        }
+
+
+        /* ================= RESUME PAGE ================= */
+
+        .resume {
+
+            min-height: calc(100vh - 70px);
+
+            padding-top: 150px;
+
+            padding-left: 20px;
+
+            padding-right: 20px;
+
+            padding-bottom: 80px;
+
+            background: #F5F7F2;
+
+            text-align: center;
+        }
+
+
+        /* ================= TITLE ================= */
+
+        .resume h1 {
+
+            color: #355E3B;
+
+            font-size: 40px;
+
+            font-weight: bold;
+
+            margin-bottom: 15px;
+        }
+
+
+        .line {
+
+            width: 88px;
+
+            height: 5px;
+
+            background: #527A5A;
+
+            border-radius: 5px;
+
+            margin: 0 auto 35px auto;
+        }
+
+
+        /* ================= CONTENT ================= */
+
+        .resume-content {
+
+            max-width: 850px;
+
+            margin: auto;
+
+            font-size: 19px;
+
+            line-height: 1.6;
+        }
+
+
+        .resume-content p {
+
+            margin-bottom: 30px;
+        }
+
+
+        /* ================= BUTTON ================= */
+
+        .resume-button {
+
+            display: inline-block;
+
+            background: #355E3B;
+
+            color: white;
+
+            text-decoration: none;
+
+            padding: 15px 30px;
+
+            border-radius: 8px;
+
+            font-size: 18px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+
+        .resume-button:hover {
+
+            background: #274C32;
+
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 6px 15px rgba(0, 0, 0, 0.20);
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        footer {
+
+            height: 70px;
+
+            background: #26352A;
+
+            color: white;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 16px;
+        }
+
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 800px) {
+
+            nav {
+
+                height: auto;
+
+                padding: 10px;
+            }
+
+
+            nav ul {
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+
+                gap: 4px;
+            }
+
+
+            nav ul li a {
+
+                font-size: 14px;
+
+                padding: 9px 11px;
+            }
+
+
+            .resume {
+
+                padding-top: 160px;
+
+                padding-left: 20px;
+
+                padding-right: 20px;
+            }
+
+
+            .resume h1 {
+
+                font-size: 32px;
+            }
+
+
+            .resume-content {
+
+                font-size: 17px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <nav>
+
+        <ul>
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+
+            <li>
+                <a href="about.html">
+                    About
+                </a>
+            </li>
+
+
+            <li>
+                <a href="education.html">
+                    Education
+                </a>
+            </li>
+
+
+            <li>
+                <a href="projects.html">
+                    Projects
+                </a>
+            </li>
+
+
+            <li>
+                <a href="internships.html">
+                    Internships
+                </a>
+            </li>
+
+
+            <li>
+                <a href="myresume.html" class="active">
+                    My Resume
+                </a>
+            </li>
+
+
+            <li>
+                <a href="roles.html">
+                    Roles & Responsibilities
+                </a>
+            </li>
+
+
+            <li>
+                <a href="achievements.html">
+                    Achievements
+                </a>
+            </li>
+
+
+            <li>
+                <a href="contact.html">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+
+    <!-- ================= RESUME PAGE ================= -->
+
+    <section class="resume">
+
+
+        <h1>
+            My Resume
+        </h1>
+
+
+        <div class="line"></div>
+
+
+
+        <div class="resume-content">
+
+            <p>
+                Interested in learning more about my education,
+                technical skills, projects, internships,
+                certifications, leadership experience, and achievements?
+            </p>
+
+
+            <p>
+                Click below to view or download my latest resume.
+            </p>
+
+
+            <!-- RESUME BUTTON -->
+
+            <a
+                href="resume.pdf"
+                target="_blank"
+                class="resume-button">
+
+                👀 View Resume
+
+            </a>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        © 2026 Saranya Jeyaraman. All rights reserved.
+
+    </footer>
+
+
+</body>
+
+</html>

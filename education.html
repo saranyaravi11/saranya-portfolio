@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Education - Saranya Jeyaraman</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #F5F7F2;
+            color: #222222;
+        }
+
+
+        /* ================= NAVIGATION ================= */
+
+        nav {
+            width: 100%;
+            height: 70px;
+
+            background: #355E3B;
+
+            display: flex;
+            align-items: center;
+
+            padding: 0 14px;
+
+            position: fixed;
+            top: 0;
+            left: 0;
+
+            z-index: 1000;
+        }
+
+
+        nav ul {
+            width: 100%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            list-style: none;
+        }
+
+
+        nav ul li a {
+            display: block;
+
+            color: white;
+            text-decoration: none;
+
+            font-size: 17px;
+            font-weight: bold;
+
+            padding: 13px 16px;
+
+            border-radius: 7px;
+
+            transition: 0.3s;
+        }
+
+
+        /* ================= EDUCATION ACTIVE ================= */
+
+        nav ul li a.active {
+            background: #274C32;
+
+            box-shadow:
+                0 0 8px rgba(0, 0, 0, 0.45),
+                0 0 18px rgba(0, 0, 0, 0.30),
+                0 0 28px rgba(0, 0, 0, 0.15);
+        }
+
+
+        nav ul li a:hover {
+            background: #274C32;
+        }
+
+
+        /* ================= EDUCATION ================= */
+
+        .education {
+            min-height: calc(100vh - 70px);
+
+            padding-top: 120px;
+            padding-left: 5px;
+            padding-right: 5px;
+            padding-bottom: 60px;
+
+            background: #F5F7F2;
+        }
+
+
+        /* ================= TITLE ================= */
+
+        .education-title {
+            text-align: center;
+
+            margin-bottom: 50px;
+        }
+
+
+        .education-title h1 {
+            color: #355E3B;
+
+            font-size: 36px;
+
+            font-weight: bold;
+
+            margin-bottom: 13px;
+        }
+
+
+        .line {
+            width: 88px;
+            height: 5px;
+
+            background: #527A5A;
+
+            border-radius: 5px;
+
+            margin: auto;
+        }
+
+
+        /* ================= EDUCATION CARDS ================= */
+
+        .education-container {
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 30px;
+
+            width: 100%;
+        }
+
+
+        .education-card {
+            min-height: 263px;
+
+            background: linear-gradient(
+                to bottom,
+                #E8F0E5,
+                #DCE8D9
+            );
+
+            border-radius: 13px;
+
+            padding: 30px 25px;
+
+            text-align: center;
+
+            box-shadow:
+                0 5px 18px rgba(0, 0, 0, 0.12);
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: flex-start;
+        }
+
+
+        .education-card h2 {
+            font-size: 25px;
+
+            margin-bottom: 17px;
+
+            color: #222222;
+        }
+
+
+        .education-card p {
+            font-size: 18px;
+
+            line-height: 1.5;
+
+            color: #222222;
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            height: 70px;
+
+            background: #26352A;
+
+            color: white;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 16px;
+        }
+
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 1100px) {
+
+            .education-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            nav {
+                height: auto;
+                padding: 10px;
+            }
+
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 4px;
+            }
+
+
+            nav ul li a {
+                font-size: 14px;
+                padding: 9px 11px;
+            }
+
+
+            .education {
+                padding-top: 150px;
+                padding-left: 15px;
+                padding-right: 15px;
+                padding-bottom: 50px;
+            }
+
+
+            .education-title h1 {
+                font-size: 30px;
+            }
+
+
+            .education-container {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <nav>
+
+        <ul>
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+
+            <li>
+                <a href="about.html">
+                    About
+                </a>
+            </li>
+
+
+            <li>
+                <a href="education.html" class="active">
+                    Education
+                </a>
+            </li>
+
+
+            <li>
+                <a href="projects.html">
+                    Projects
+                </a>
+            </li>
+
+
+            <li>
+                <a href="internships.html">
+                    Internships
+                </a>
+            </li>
+
+
+            <li>
+                <a href="myresume.html">
+                    My Resume
+                </a>
+            </li>
+
+
+            <li>
+                <a href="roles.html">
+                    Roles & Responsibilities
+                </a>
+            </li>
+
+
+            <li>
+                <a href="achievements.html">
+                    Achievements
+                </a>
+            </li>
+
+
+            <li>
+                <a href="contact.html">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+
+    <!-- ================= EDUCATION PAGE ================= -->
+
+    <section class="education">
+
+
+        <div class="education-title">
+
+            <h1>
+                My Educational Background
+            </h1>
+
+            <div class="line"></div>
+
+        </div>
+
+
+
+        <div class="education-container">
+
+
+            <!-- ================= 10TH ================= -->
+
+            <div class="education-card">
+
+                <h2>
+                    10th Grade
+                </h2>
+
+                <p>
+                    Seva Sangam Grils Higher Secondary School
+                </p>
+
+                <p>
+                    Trichy - 2021
+                </p>
+
+            </div>
+
+
+
+            <!-- ================= 11TH ================= -->
+
+            <div class="education-card">
+
+                <h2>
+                    11th Grade
+                </h2>
+
+                <p>
+                    Seva Sangam Grils Higher Secondary School
+                </p>
+
+                <p>
+                    Trichy - 70% - 2022
+                </p>
+
+            </div>
+
+
+
+            <!-- ================= 12TH ================= -->
+
+            <div class="education-card">
+
+                <h2>
+                    12th Grade
+                </h2>
+
+                <p>
+                    Seva Sangam Grils Higher Secondary School
+                </p>
+
+                <p>
+                    Trichy - 78.33% - 2023
+                </p>
+
+            </div>
+
+
+
+            <!-- ================= UNDERGRADUATE ================= -->
+
+            <div class="education-card">
+
+                <h2>
+                    Undergraduate
+                </h2>
+
+                <p>
+                    B.Tech (Artificial Intelligence & Data Science)
+                </p>
+
+                <p>
+                    CARE College of Engineering
+                </p>
+
+                <p>
+                    2023 - 2027
+                </p>
+
+                <p>
+                    Currently Pursuing
+                </p>
+
+                <p>
+                    CGPA : 7.78/10
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        © 2026 Saranya Jeyaraman. All rights reserved.
+
+    </footer>
+
+
+</body>
+
+</html>

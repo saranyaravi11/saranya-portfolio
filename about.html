@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>About - Saranya Jeyaraman</title>
+
+<style>
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: #F5F7F2;
+        color: #222222;
+    }
+
+
+    /* ================= NAVIGATION ================= */
+
+    nav {
+        width: 100%;
+        height: 70px;
+
+        background: #355E3B;
+
+        display: flex;
+        align-items: center;
+
+        padding: 0 14px;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        z-index: 1000;
+    }
+
+
+    nav ul {
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        list-style: none;
+    }
+
+
+    nav ul li a {
+        display: block;
+
+        color: white;
+
+        text-decoration: none;
+
+        font-size: 17px;
+
+        font-weight: bold;
+
+        padding: 13px 16px;
+
+        border-radius: 7px;
+
+        transition: 0.3s;
+    }
+
+
+    /* ABOUT IS ACTIVE */
+
+    nav ul li a.active {
+        background: #274C32;
+
+        box-shadow:
+            0 0 8px rgba(0, 0, 0, 0.45),
+            0 0 18px rgba(0, 0, 0, 0.30),
+            0 0 28px rgba(0, 0, 0, 0.15);
+    }
+
+
+    nav ul li a:hover {
+        background: #274C32;
+    }
+
+
+
+    /* ================= ABOUT PAGE ================= */
+
+    .about {
+
+        min-height: calc(100vh - 70px);
+
+        padding-top: 125px;
+
+        padding-left: 8%;
+
+        padding-right: 8%;
+
+        padding-bottom: 70px;
+
+        background: #F5F7F2;
+
+        text-align: center;
+    }
+
+
+
+    /* ================= TITLE ================= */
+
+    .about h1 {
+
+        color: #355E3B;
+
+        font-size: 40px;
+
+        font-weight: bold;
+
+        margin-bottom: 15px;
+    }
+
+
+
+    /* ================= GREEN LINE ================= */
+
+    .line {
+
+        width: 85px;
+
+        height: 5px;
+
+        background: #527A5A;
+
+        border-radius: 5px;
+
+        margin: 0 auto 40px auto;
+    }
+
+
+
+    /* ================= ABOUT CONTENT ================= */
+
+    .about-content {
+
+        max-width: 1000px;
+
+        margin: 0 auto;
+
+        font-size: 19px;
+
+        line-height: 1.55;
+    }
+
+
+    .about-content p {
+
+        margin-bottom: 5px;
+    }
+
+
+
+    /* ================= PROJECT LIST ================= */
+
+    .project-title {
+
+        margin-top: 5px;
+
+        margin-bottom: 5px;
+    }
+
+
+    .project-list {
+
+        width: 180px;
+
+        margin: 0 auto;
+
+        text-align: left;
+
+        font-size: 19px;
+
+        line-height: 1.45;
+    }
+
+
+    .project-list li {
+
+        font-weight: bold;
+
+        padding-left: 3px;
+    }
+
+
+
+    /* ================= FOOTER ================= */
+
+    footer {
+
+        height: 70px;
+
+        background: #26352A;
+
+        color: white;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        font-size: 16px;
+    }
+
+
+
+    /* ================= MOBILE ================= */
+
+    @media (max-width: 1000px) {
+
+        nav {
+
+            height: auto;
+
+            padding: 10px;
+        }
+
+
+        nav ul {
+
+            flex-wrap: wrap;
+
+            justify-content: center;
+
+            gap: 4px;
+        }
+
+
+        nav ul li a {
+
+            font-size: 14px;
+
+            padding: 9px 11px;
+        }
+
+
+        .about {
+
+            padding-top: 150px;
+
+            padding-left: 20px;
+
+            padding-right: 20px;
+        }
+
+
+        .about h1 {
+
+            font-size: 32px;
+        }
+
+
+        .about-content {
+
+            font-size: 17px;
+        }
+
+
+        .project-list {
+
+            font-size: 17px;
+        }
+
+    }
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVIGATION ================= -->
+
+<nav>
+
+    <ul>
+
+        <li>
+            <a href="index.html">
+                Home
+            </a>
+        </li>
+
+
+        <li>
+            <a href="about.html" class="active">
+                About
+            </a>
+        </li>
+
+
+        <li>
+            <a href="education.html">
+                Education
+            </a>
+        </li>
+
+
+        <li>
+            <a href="projects.html">
+                Projects
+            </a>
+        </li>
+
+
+        <li>
+            <a href="internships.html">
+                Internships
+            </a>
+        </li>
+
+
+        <li>
+            <a href="resume.html">
+                My Resume
+            </a>
+        </li>
+
+
+        <li>
+            <a href="roles.html">
+                Roles & Responsibilities
+            </a>
+        </li>
+
+
+        <li>
+            <a href="achievements.html">
+                Achievements
+            </a>
+        </li>
+
+
+        <li>
+            <a href="contact.html">
+                Contact
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="about">
+
+
+    <h1>
+        About Me
+    </h1>
+
+
+    <div class="line"></div>
+
+
+
+    <div class="about-content">
+
+        <p>
+            I am a passionate Full Stack Developer, Sotftware Developer and AI enthusiast, AI/ML Developer,
+            Data Analyst. I specialize in creating interactive
+            websites,and working on data visualization.
+        </p>
+
+
+        <p>
+            I am currently working on innovative projects like:
+        </p>
+
+
+        <ul class="project-list">
+
+            <li>
+                EcoVert
+            </li>
+
+            <li>
+                Gestro
+            </li>
+
+            <li>
+                CompFree
+            </li>
+
+        </ul>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    © 2026 Saranya Jeyaraman. All rights reserved.
+
+</footer>
+
+
+</body>
+
+</html>
